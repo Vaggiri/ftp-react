@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">AmritaFTP</string>
+    <string name="title_activity_main">AmritaFTP</string>
+    <string name="package_name">com.amrita.ftp</string>
+    <string name="custom_url_scheme">com.amrita.ftp</string>
+</resources>
