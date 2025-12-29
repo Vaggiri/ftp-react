@@ -12,18 +12,18 @@ jobs:
 
     steps:
       # 1. Check out your code
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       # 2. Setup Java (Required for Android Build)
       - name: Set up JDK 17
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
 
       # 3. Setup Android SDK
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v2
+        uses: android-actions/setup-android@v3
 
       # 4. Install Dependencies & Sync Capacitor
       - name: Install Dependencies
@@ -42,9 +42,9 @@ jobs:
           chmod +x gradlew
           ./gradlew assembleDebug
 
-      # 6. Upload the APK so you can download it
+      # 6. Upload the APK (UPDATED TO V4)
       - name: Upload APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: AmritaFTP-APK
           path: android/app/build/outputs/apk/debug/app-debug.apk
